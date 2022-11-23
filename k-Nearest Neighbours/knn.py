@@ -18,9 +18,25 @@ def most_frequent_label(neighbours):
     Function to return the most frequent label of given list of neighbours
     """
     winning_label = ""
+    k_labels = []
 
+    for k_count in range(0, k):
+        dist = list_of_distances[k_count]
+        for neighbour in neighbours:
+            if neighbour._distance == dist:
+                k_labels.append(neighbour._label)
+
+    most_occur = Counter(k_labels).most_common(4)
     return winning_label
 
+
+def sort_list(list):
+    """
+    Function to return sorted list with descending values.
+    """
+    sorted_list = sorted(list)
+
+    return sorted_list
 
 
 def k_nearest_neighbours(training_data, test_point, k):
@@ -42,8 +58,8 @@ def k_nearest_neighbours(training_data, test_point, k):
         list_of_distances.append(distance)
         list_of_vec.append(vec)
 
-    list_of_distances = sorted(list_of_distances)
-    
+    list_of_distances = sort_list(list_of_distances) # Sorts list in descending order
+
     k_labels = []
 
     for k_count in range(0, k):
