@@ -1,10 +1,21 @@
 from data import Data, data_min_max
+import random
 
 import numpy as np
+import math
 
-###TODO###
 def create_random_centroids(data, k):
-    return 0
+    centroids = []
+    used_index = []
+    for not_used in range(0, k):
+        centroid_index = random.randrange(len(data))
+        while centroid_index in used_index:
+            centroid_index = random.randrange(len(data))
+        
+        centroids.append(data[centroid_index])
+        used_index.append(centroid_index)
+        
+    return centroids
 
 ###TODO###
 def validate_clusters(clustered_data, centroids, amount_data):
@@ -16,7 +27,24 @@ def best_clustering(data, k, frequency):
 
 ###TODO###
 def KMeans(data, centroids):
-    return 0
+    cluster_list = []
+    cluster = []
+    for centroid_index in range(0, len(centroids)):
+        min_dist = float('inf')
+        for datapoint in data:
+            distance = math.dist(datapoint, centroids[centroid_index])
+            if min_dist > distance:
+                min_dist = distance
+
+            
+        
+        # find the nearest centroid
+        # assign datapoint to cluster
+
+    # for cluster in range (1, k):
+    #     #calculate new centroid c[cluster] as the mean of all points datapoint that are assigned to cluster
+
+        
 
 ###TODO###
 def plot_results(length, best):
@@ -46,10 +74,14 @@ if __name__ == "__main__":
     validation_data.normalise(min_data, max_data)
     unclassified_data.normalise(min_data, max_data)
 
-
-
+    
+    #TEST
+    centroids = create_random_centroids(unclassified_data.data, 4)
+    KMeans(training_data.data, centroids)
 
     
+    
+
 
 
 
