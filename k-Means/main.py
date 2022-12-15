@@ -1,54 +1,26 @@
 from data import Data, data_min_max
-import random
+from kmeans import best_clustering
 
 import numpy as np
-import math
+import matplotlib.pyplot as plt 
 
-def create_random_centroids(data, k):
-    centroids = []
-    used_index = []
-    for not_used in range(0, k):
-        centroid_index = random.randrange(len(data))
-        while centroid_index in used_index:
-            centroid_index = random.randrange(len(data))
-        
-        centroids.append(data[centroid_index])
-        used_index.append(centroid_index)
-        
-    return centroids
 
-###TODO###
-def validate_clusters(clustered_data, centroids, amount_data):
-    return 0
-
-###TODO###
-def best_clustering(data, k, frequency):
-    return 0
-
-###TODO###
-def KMeans(data, centroids):
-    cluster_list = []
-    cluster = []
-    for centroid_index in range(0, len(centroids)):
-        min_dist = float('inf')
-        for datapoint in data:
-            distance = math.dist(datapoint, centroids[centroid_index])
-            if min_dist > distance:
-                min_dist = distance
-
-            
-        
-        # find the nearest centroid
-        # assign datapoint to cluster
-
-    # for cluster in range (1, k):
-    #     #calculate new centroid c[cluster] as the mean of all points datapoint that are assigned to cluster
-
-        
-
-###TODO###
 def plot_results(length, best):
-    return 0
+    plt.plot(
+        length, 
+        best, 
+        'o-', 
+        linewidth=2, 
+        color='red', 
+        marker='o',
+        markeredgecolor='#1e78b4',
+        markerfacecolor='#1e78b4',
+        markersize=5)
+
+    plt.title("K means error rate")
+    plt.xlabel("K")
+    plt.ylabel("Error rate")
+    plt.show()
 
 
 if __name__ == "__main__":
@@ -74,13 +46,11 @@ if __name__ == "__main__":
     validation_data.normalise(min_data, max_data)
     unclassified_data.normalise(min_data, max_data)
 
-    
-    #TEST
-    centroids = create_random_centroids(unclassified_data.data, 4)
-    KMeans(training_data.data, centroids)
-
-    
-    
+    # Get the result
+    num_iterations = 100 # Define number of iterations
+    length = [k+1 for k in range(num_iterations)] # Fill list with k
+    best_clusters = [best_clustering(training_data.data, k+1, frequency=10) for k in range(num_iterations)] # Call best_clustering function and append to list
+    plot_results(length, best_clusters)
 
 
 
