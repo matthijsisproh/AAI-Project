@@ -6,6 +6,14 @@ import matplotlib.pyplot as plt
 
 
 def plot_results(length, best):
+    """
+    This function plots the error rate of the K means algorithm.
+
+    :param length: The number of clusters.
+    :param best: The error rate
+    :return None
+    """
+
     plt.plot(
         length, 
         best, 
