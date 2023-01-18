@@ -5,8 +5,6 @@ from analyse import analyse
 from knn import k_nearest_neighbours
 
 
-
-
 if __name__ == "__main__":
     # Unclassified file
     filename_unclassified_data = "days.csv"
