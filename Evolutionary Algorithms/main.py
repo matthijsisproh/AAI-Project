@@ -1,80 +1,107 @@
-# Local hill climbing
-from random import randint, random
-from functools import reduce
-from operator import add
+import random
+import time
+import numpy as np
+import os
+import matplotlib.pyplot as plt
+import json
 
+from operator import length_hint
 
-class Solution:
-    def __init__(self, value):
-        self.value = value
-        self.fitness = None
+import matplotlib.pyplot as plt
 
-    def set_fitness(self, value):
-        self.fitness = value
+from population import Population
 
-    def modify(self):
-        return self
+from evolutionaryalgorithm import evolutionary_algorithm
+
+random.seed(0)
+
+def main():
+    """
+    Perform the main execution of the evolutionary algorithm.
+
+    This function initializes the necessary variables and objects, runs the evolutionary algorithm for a given number of generations,
+    and prints and saves the results.
+
+    Returns:
+        None
+    """
+    best_fitness_results = []
+    best_fitness_results_per_epoch = []
+    best_individuals = []
+    best_fitness_overall = float('-inf')
     
-    def calculate_fitness(self):
-        calculated_value = 1
-        self.fitness = calculated_value
+    population_size = 1000
+    max_generations = 1000
 
-def individual(length, min, max):
-    return[randint(min, max) for x in range(length)]
+    knight_names = np.genfromtxt(
+            f'{os.getcwd()}/Evolutionary Algorithms/data/RondeTafel.csv', delimiter=';', usecols=[0], skip_header=2, dtype=str)
+     
+    affinities = np.genfromtxt(f'{os.getcwd()}/Evolutionary Algorithms/data/RondeTafel.csv',
+                                         delimiter=';', usecols=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], skip_header=2)
 
-def population(count, length, min, max):
-    return [individual(length, min, max) for x in range(count)]
+    random_population = Population(population_size, affinities)
 
-def fitness(individual, target):
-    sum = reduce(add, individual, 0)
-    return abs(target-sum)
+    start_time = time.time()
+    for epoch in range(0, max_generations):
+        population = evolutionary_algorithm(random_population)
+        best_fitness_per_epoch = float('-inf')
+        for individual in population:
+            fitness = individual.evaluate_fitness(affinities)
+            if fitness > best_fitness_overall:
+                best_fitness_overall = fitness
+                best_individuals.append(individual)
+            if fitness > best_fitness_per_epoch:
+                best_fitness_per_epoch = fitness
 
-def grade(population, target):
-    summed = reduce(add, (fitness(x, target) for x  in population), 0)
-    return summed / len(population)
+        best_fitness_results.append(best_fitness_overall)
+        best_fitness_results_per_epoch.append(best_fitness_per_epoch)
+        
+        print("Epoch: {}, Best Fitness: {}, Maximum generations: {}".format(epoch, float(round(best_fitness_overall, 5)), max_generations), end='\r')
+            
+    print("\nElapsed time: ", round(time.time() - start_time, 3))
 
-def tournament_selection(size, pool):
-    probability = max(pool.propability)
-    best_individual = pool # best propability
-    second_individual = propability * (1 - propability)
-    # and so on
+    plt.plot(range(len(best_fitness_results)), best_fitness_results,
+        linewidth=1, color="blue", label="Max Fitness per Epoch")
+    plt.legend()
+    plt.show()
 
-def evolve(population, target, retain=0.2, random_select=0.05, mutate=0.01):
-    graded = [fitness(x,target), x) for x in population]
-    graded = [ x[1] for x in sorted(graded)]
-    retain_length = int(len(graded)*retain)
-    parents = graded[:retain_length]
+    plt.plot(range(len(best_fitness_results_per_epoch)), best_fitness_results_per_epoch,
+        linewidth=1, color="blue", label="Max Fitness per Epoch")
+    plt.legend()
+    plt.show()
 
-    #Randomly add other individuals to promote genetic diversity
-    for individual in graded[retain_length:]:
-        if random_select > random():
-            parents.append(individual)
+    for winning_individual in best_individuals:
+        print("Individual genes: {}, \nFitness: {}".format(
+            winning_individual._genes, 
+            winning_individual.fitness), 
+            end='\n')
+        
+        for weight_products in winning_individual.weight_products:
+            print("Knight: {}, Knight 2: {}, weight_product {}".format(
+                knight_names[weight_products[0]],
+                knight_names[weight_products[1]],
+                weight_products[2]
+                ))
 
-    # Crossover parents to create offspring
+    output_data = []
 
-    # Mutate some individuals
+    for winning_individual in best_individuals:
+        individual_data = {
+            "genes": winning_individual._genes,
+            "fitness": winning_individual.fitness,
+            "weight_products": []
+        }
+        for weight_products in winning_individual.weight_products:
+            weight_product_data = {
+                "knight1": knight_names[weight_products[0]],
+                "knight2": knight_names[weight_products[1]],
+                "weight_product": weight_products[2]
+            }
+            individual_data["weight_products"].append(weight_product_data)
+        output_data.append(individual_data)
 
+    with open("output.json", "w") as json_file:
+        json.dump(output_data, json_file, indent=4)
 
-
-    
-
-
-
-
-
-random_solution = Solution([10,10])
-list_of_solutions = [random_solution]
-time = 0
-
-while(True):
-    new_solution = Solution(list_of_solutions[time].modify())
-    new_solution.calculate_fitness()
-
-    if new_solution.fitness > list_of_solutions[time].fitness:
-        new_solution = list_of_solutions[time+1]
-
-    else:
-        list_of_solutions[time+1] = list_of_solutions[time]
-    
-    time = time + 1
-
+if __name__ == "__main__":
+    main()

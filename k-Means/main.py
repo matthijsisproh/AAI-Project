@@ -1,4 +1,4 @@
-from data import Data, data_min_max
+from data_Kmeans import Data, data_min_max
 from kmeans import best_clustering
 
 import numpy as np

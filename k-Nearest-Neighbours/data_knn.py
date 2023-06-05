@@ -1,4 +1,5 @@
 import numpy as np
+import os
 
 class Data:
     def __init__(self, filename):
@@ -18,14 +19,14 @@ class Data:
         :param filename: A string representing the filename of the dataset.
         """
         self.data = np.genfromtxt(
-            f'C:\\Users\\MatthijsKoelewijnDen\\Documents\\Github\\AAI-Project\\data\\{filename}', 
+            f'{os.getcwd()}/k-Nearest-Neighbours/data/{filename}', 
             delimiter=';', 
             usecols=[1,2,3,4,5,6,7], 
             converters={5: lambda s: 0 if s == b"-1" else float(s), 7: lambda s: 0 if s == b"-1" else float(s)}
             )
 
         self.dates = np.genfromtxt(
-            f'C:\\Users\\MatthijsKoelewijnDen\\Documents\\Github\\AAI-Project\\data\\{filename}', 
+            f'{os.getcwd()}/k-Nearest-Neighbours/data/{filename}', 
             delimiter=';', 
             usecols=[0]
             )

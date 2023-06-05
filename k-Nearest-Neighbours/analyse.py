@@ -26,7 +26,7 @@ class analyse:
         This function prints a progress bar to the console.
 
         :param k: The current iteration of the loop.
-.       :return: None
+        :return: None
         """
         percentage = round(k/(self.range_k-1)*100, 2)
         print('Progress: [{}{}{}]  {}%'.format( 

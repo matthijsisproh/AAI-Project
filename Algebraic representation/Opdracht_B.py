@@ -87,15 +87,30 @@ def buildMyModel(inputShape):
         [
             keras.Input(shape=inputShape),
             
-            # voeg hier je layers toe.
+            # Convolutional layers
+            layers.Conv2D(32, kernel_size=(3, 3), padding='same', activation='relu'),
+            layers.Dropout(0.25),
             
+            layers.Conv2D(64, kernel_size=(3, 3), padding='same', activation='relu'),
+            layers.Dropout(0.25),
+            
+            # MaxPooling layer
+            layers.MaxPooling2D(pool_size=(2, 2)),
+            
+            # Flatten the output
+            layers.Flatten(),
+            
+            # Output layer
             layers.Dense(units=num_classes, activation='sigmoid')
         ]
     )
     return model
 
+
 model = buildMyModel(x_train[0].shape)
 model.summary()
+
+
 
 """
 Opdracht B2:
@@ -103,12 +118,86 @@ Opdracht B2:
 Kopieer bovenstaande model summary en verklaar bij 
 bovenstaande model summary bij elke laag met kleine berekeningen 
 de Output Shape
+
 """
 
 """
 Opdracht B3: 
     
 Verklaar nu bij elke laag met kleine berekeningen het aantal parameters.
+
+Layer (type)                Output Shape              Param #
+=================================================================
+ conv2d (Conv2D)             (None, 28, 28, 32)        320
+
+ dropout (Dropout)           (None, 28, 28, 32)        0
+
+ conv2d_1 (Conv2D)           (None, 28, 28, 64)        18496
+
+ dropout_1 (Dropout)         (None, 28, 28, 64)        0
+
+ max_pooling2d (MaxPooling2D  (None, 14, 14, 64)       0
+ )
+
+ flatten (Flatten)           (None, 12544)             0
+
+ dense (Dense)               (None, 10)                125450
+
+=================================================================
+Total params: 144,266
+Trainable params: 144,266
+Non-trainable params: 0
+
+Formule aantal parameters conv2d: (Aantal filters x kernelgrootte x inputkanaal) + bias
+Formule aantal parameters dense: (Aantal input neuronen x aantal output neuronen) + aantal output neuronen
+
+conv2d: 
+Input Shape: (None, 28, 28, 1) afkomstig van de invoerlaag
+Output Shape: (None, 28, 28, 32)
+Berekening: conv2d past 32 filters toe op elke input van 3x3, wat
+resulteert in een output feature map van 28x28 met 32 filters.
+Het aantal parameters voor deze laag is: 
+(32 filters x (3x3) kernelgrootte x 1 inputkanaal) + 32 bias = 320 parameters
+(32 x 9 x 1) + 32 = 320 parameters
+
+dropout:
+De Dropout-laag voert geen wijzigingen toe aan de vorm van de feature maps.
+Het schakelt wel de 25% van de elementen uit, wat resulteert in een uitgedunde representatie.
+
+conv2d_1:
+Input Shape: (None, 28, 28, 32) 
+Output Shape: (None, 28, 28, 64)
+Berekening: conv2d_1 past 64 filters toe op elke input van 3x3, wat
+resulteert in een output feature map van 28x28 met 64 filters.
+Het aantal parameters voor deze laag is:
+(64 filters x (3x3) kernelgrootte x 32 inputkanaal) + 64 bias = 18.496 parameters
+
+dropout_1:
+Wederom voert de Dropout-laag geen wijzigingen toe aan de vorm van de feature maps.
+Het schakelt wel de 25% van de elementen uit, wat resulteert in een uitgedunde representatie.
+
+max_pooling2d:
+Input Shape: (None, 28, 28, 64)
+Output Shape: (None, 14, 14, 64)
+Berekening: max_pooling2d verdeelt de ruimtelijke dimensies van de feature maps
+door de opgegeven poolgrootte (2x2). Hierdoor worden de dimensies gehalveerd (28/2 = 14)
+en blijven de 64 kanalen behouden. Dit leidt tot een halvering van het aantal pixels
+en helpt bij het verhogen van de ruimtelijke invariantie.
+
+flatten:
+Input Shape: (None, 14, 14, 64)
+Output Shape: (None, 12544)
+Berekening: De flatten laag herstructureert de input feature maps naar een 1D-vector.
+In dit geval wordt de dimensie 14x14x64 omgezet naar een vector van lengte 12.544.
+14x14x64 = 12.544
+
+dense:
+Input Shape: (None, 12544)
+Output Shape: (None, 10)
+Berekening: De Dense-laag bevat 10 neuronen, wat overeenkomt met het aantal klassen in de dataset(0-9).
+Het aantal parameters voor deze laag is 12544 inputkenmerken x 10 neuronen + 10 bias termen = 125.450
+
+Totale aantal parameters = 320 + 18.496 + 125.450 = 144.266
 """
 
 """

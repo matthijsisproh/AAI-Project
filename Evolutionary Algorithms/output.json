@@ -1,0 +1,1029 @@
+[
+    {
+        "genes": [
+            4,
+            7,
+            8,
+            0,
+            1,
+            2,
+            11,
+            3,
+            6,
+            9,
+            10,
+            5
+        ],
+        "fitness": 0.681475,
+        "weight_products": [
+            {
+                "knight1": "Percival",
+                "knight2": "Kay Sir Gareth",
+                "weight_product": 0.7360000000000001
+            },
+            {
+                "knight1": "Kay Sir Gareth",
+                "knight2": "Bedivere",
+                "weight_product": 0.6532
+            },
+            {
+                "knight1": "Bedivere",
+                "knight2": "Arthur",
+                "weight_product": 0.27
+            },
+            {
+                "knight1": "Arthur",
+                "knight2": "Lancelot",
+                "weight_product": 0.42
+            },
+            {
+                "knight1": "Lancelot",
+                "knight2": "Gawain",
+                "weight_product": 0.19040000000000004
+            },
+            {
+                "knight1": "Gawain",
+                "knight2": "Tristan",
+                "weight_product": 0.2548
+            },
+            {
+                "knight1": "Tristan",
+                "knight2": "Geraint",
+                "weight_product": 0.0096
+            },
+            {
+                "knight1": "Geraint",
+                "knight2": "Lamorak",
+                "weight_product": 0.23779999999999996
+            },
+            {
+                "knight1": "Lamorak",
+                "knight2": "Gaheris",
+                "weight_product": 0.1056
+            },
+            {
+                "knight1": "Gaheris",
+                "knight2": "Galahad",
+                "weight_product": 0.5002
+            },
+            {
+                "knight1": "Galahad",
+                "knight2": "Bors the Younger",
+                "weight_product": 0.3127
+            },
+            {
+                "knight1": "Bors the Younger",
+                "knight2": "Percival",
+                "weight_product": 0.132
+            }
+        ]
+    },
+    {
+        "genes": [
+            8,
+            11,
+            3,
+            0,
+            10,
+            5,
+            7,
+            1,
+            4,
+            6,
+            2,
+            9
+        ],
+        "fitness": 0.6819166666666667,
+        "weight_products": [
+            {
+                "knight1": "Bedivere",
+                "knight2": "Tristan",
+                "weight_product": 0.1281
+            },
+            {
+                "knight1": "Tristan",
+                "knight2": "Geraint",
+                "weight_product": 0.0096
+            },
+            {
+                "knight1": "Geraint",
+                "knight2": "Arthur",
+                "weight_product": 0.3402
+            },
+            {
+                "knight1": "Arthur",
+                "knight2": "Galahad",
+                "weight_product": 0.087
+            },
+            {
+                "knight1": "Galahad",
+                "knight2": "Bors the Younger",
+                "weight_product": 0.3127
+            },
+            {
+                "knight1": "Bors the Younger",
+                "knight2": "Kay Sir Gareth",
+                "weight_product": 0.2916
+            },
+            {
+                "knight1": "Kay Sir Gareth",
+                "knight2": "Lancelot",
+                "weight_product": 0.9016000000000001
+            },
+            {
+                "knight1": "Lancelot",
+                "knight2": "Percival",
+                "weight_product": 0.5394
+            },
+            {
+                "knight1": "Percival",
+                "knight2": "Lamorak",
+                "weight_product": 0.1843
+            },
+            {
+                "knight1": "Lamorak",
+                "knight2": "Gawain",
+                "weight_product": 0.35379999999999995
+            },
+            {
+                "knight1": "Gawain",
+                "knight2": "Gaheris",
+                "weight_product": 0.408
+            },
+            {
+                "knight1": "Gaheris",
+                "knight2": "Bedivere",
+                "weight_product": 0.26070000000000004
+            }
+        ]
+    },
+    {
+        "genes": [
+            11,
+            6,
+            4,
+            5,
+            7,
+            9,
+            2,
+            1,
+            10,
+            3,
+            0,
+            8
+        ],
+        "fitness": 0.7487083333333333,
+        "weight_products": [
+            {
+                "knight1": "Tristan",
+                "knight2": "Lamorak",
+                "weight_product": 0.1368
+            },
+            {
+                "knight1": "Lamorak",
+                "knight2": "Percival",
+                "weight_product": 0.1843
+            },
+            {
+                "knight1": "Percival",
+                "knight2": "Bors the Younger",
+                "weight_product": 0.132
+            },
+            {
+                "knight1": "Bors the Younger",
+                "knight2": "Kay Sir Gareth",
+                "weight_product": 0.2916
+            },
+            {
+                "knight1": "Kay Sir Gareth",
+                "knight2": "Gaheris",
+                "weight_product": 0.22120000000000004
+            },
+            {
+                "knight1": "Gaheris",
+                "knight2": "Gawain",
+                "weight_product": 0.408
+            },
+            {
+                "knight1": "Gawain",
+                "knight2": "Lancelot",
+                "weight_product": 0.19040000000000004
+            },
+            {
+                "knight1": "Lancelot",
+                "knight2": "Galahad",
+                "weight_product": 0.217
+            },
+            {
+                "knight1": "Galahad",
+                "knight2": "Geraint",
+                "weight_product": 0.49589999999999995
+            },
+            {
+                "knight1": "Geraint",
+                "knight2": "Arthur",
+                "weight_product": 0.3402
+            },
+            {
+                "knight1": "Arthur",
+                "knight2": "Bedivere",
+                "weight_product": 0.27
+            },
+            {
+                "knight1": "Bedivere",
+                "knight2": "Tristan",
+                "weight_product": 0.1281
+            }
+        ]
+    },
+    {
+        "genes": [
+            10,
+            0,
+            2,
+            4,
+            1,
+            5,
+            3,
+            8,
+            7,
+            9,
+            11,
+            6
+        ],
+        "fitness": 0.7672249999999999,
+        "weight_products": [
+            {
+                "knight1": "Galahad",
+                "knight2": "Arthur",
+                "weight_product": 0.087
+            },
+            {
+                "knight1": "Arthur",
+                "knight2": "Gawain",
+                "weight_product": 0.684
+            },
+            {
+                "knight1": "Gawain",
+                "knight2": "Percival",
+                "weight_product": 0.019000000000000003
+            },
+            {
+                "knight1": "Percival",
+                "knight2": "Lancelot",
+                "weight_product": 0.5394
+            },
+            {
+                "knight1": "Lancelot",
+                "knight2": "Bors the Younger",
+                "weight_product": 0.0275
+            },
+            {
+                "knight1": "Bors the Younger",
+                "knight2": "Geraint",
+                "weight_product": 0.284
+            },
+            {
+                "knight1": "Geraint",
+                "knight2": "Bedivere",
+                "weight_product": 0.0
+            },
+            {
+                "knight1": "Bedivere",
+                "knight2": "Kay Sir Gareth",
+                "weight_product": 0.6532
+            },
+            {
+                "knight1": "Kay Sir Gareth",
+                "knight2": "Gaheris",
+                "weight_product": 0.22120000000000004
+            },
+            {
+                "knight1": "Gaheris",
+                "knight2": "Tristan",
+                "weight_product": 0.08000000000000002
+            },
+            {
+                "knight1": "Tristan",
+                "knight2": "Lamorak",
+                "weight_product": 0.1368
+            },
+            {
+                "knight1": "Lamorak",
+                "knight2": "Galahad",
+                "weight_product": 0.061200000000000004
+            }
+        ]
+    },
+    {
+        "genes": [
+            11,
+            7,
+            10,
+            2,
+            6,
+            1,
+            4,
+            8,
+            0,
+            5,
+            9,
+            3
+        ],
+        "fitness": 0.7871,
+        "weight_products": [
+            {
+                "knight1": "Tristan",
+                "knight2": "Kay Sir Gareth",
+                "weight_product": 0.102
+            },
+            {
+                "knight1": "Kay Sir Gareth",
+                "knight2": "Galahad",
+                "weight_product": 0.024300000000000002
+            },
+            {
+                "knight1": "Galahad",
+                "knight2": "Gawain",
+                "weight_product": 0.043500000000000004
+            },
+            {
+                "knight1": "Gawain",
+                "knight2": "Lamorak",
+                "weight_product": 0.35379999999999995
+            },
+            {
+                "knight1": "Lamorak",
+                "knight2": "Lancelot",
+                "weight_product": 0.3458
+            },
+            {
+                "knight1": "Lancelot",
+                "knight2": "Percival",
+                "weight_product": 0.5394
+            },
+            {
+                "knight1": "Percival",
+                "knight2": "Bedivere",
+                "weight_product": 0.2025
+            },
+            {
+                "knight1": "Bedivere",
+                "knight2": "Arthur",
+                "weight_product": 0.27
+            },
+            {
+                "knight1": "Arthur",
+                "knight2": "Bors the Younger",
+                "weight_product": 0.47430000000000005
+            },
+            {
+                "knight1": "Bors the Younger",
+                "knight2": "Gaheris",
+                "weight_product": 0.072
+            },
+            {
+                "knight1": "Gaheris",
+                "knight2": "Geraint",
+                "weight_product": 0.1176
+            },
+            {
+                "knight1": "Geraint",
+                "knight2": "Tristan",
+                "weight_product": 0.0096
+            }
+        ]
+    },
+    {
+        "genes": [
+            11,
+            8,
+            10,
+            0,
+            3,
+            2,
+            1,
+            4,
+            5,
+            9,
+            7,
+            6
+        ],
+        "fitness": 0.8216583333333333,
+        "weight_products": [
+            {
+                "knight1": "Tristan",
+                "knight2": "Bedivere",
+                "weight_product": 0.1281
+            },
+            {
+                "knight1": "Bedivere",
+                "knight2": "Galahad",
+                "weight_product": 0.0504
+            },
+            {
+                "knight1": "Galahad",
+                "knight2": "Arthur",
+                "weight_product": 0.087
+            },
+            {
+                "knight1": "Arthur",
+                "knight2": "Geraint",
+                "weight_product": 0.3402
+            },
+            {
+                "knight1": "Geraint",
+                "knight2": "Gawain",
+                "weight_product": 0.0047
+            },
+            {
+                "knight1": "Gawain",
+                "knight2": "Lancelot",
+                "weight_product": 0.19040000000000004
+            },
+            {
+                "knight1": "Lancelot",
+                "knight2": "Percival",
+                "weight_product": 0.5394
+            },
+            {
+                "knight1": "Percival",
+                "knight2": "Bors the Younger",
+                "weight_product": 0.132
+            },
+            {
+                "knight1": "Bors the Younger",
+                "knight2": "Gaheris",
+                "weight_product": 0.072
+            },
+            {
+                "knight1": "Gaheris",
+                "knight2": "Kay Sir Gareth",
+                "weight_product": 0.22120000000000004
+            },
+            {
+                "knight1": "Kay Sir Gareth",
+                "knight2": "Lamorak",
+                "weight_product": 0.2379
+            },
+            {
+                "knight1": "Lamorak",
+                "knight2": "Tristan",
+                "weight_product": 0.1368
+            }
+        ]
+    },
+    {
+        "genes": [
+            7,
+            10,
+            5,
+            0,
+            4,
+            2,
+            3,
+            8,
+            1,
+            6,
+            9,
+            11
+        ],
+        "fitness": 0.8306583333333334,
+        "weight_products": [
+            {
+                "knight1": "Kay Sir Gareth",
+                "knight2": "Galahad",
+                "weight_product": 0.024300000000000002
+            },
+            {
+                "knight1": "Galahad",
+                "knight2": "Bors the Younger",
+                "weight_product": 0.3127
+            },
+            {
+                "knight1": "Bors the Younger",
+                "knight2": "Arthur",
+                "weight_product": 0.47430000000000005
+            },
+            {
+                "knight1": "Arthur",
+                "knight2": "Percival",
+                "weight_product": 0.0858
+            },
+            {
+                "knight1": "Percival",
+                "knight2": "Gawain",
+                "weight_product": 0.019000000000000003
+            },
+            {
+                "knight1": "Gawain",
+                "knight2": "Geraint",
+                "weight_product": 0.0047
+            },
+            {
+                "knight1": "Geraint",
+                "knight2": "Bedivere",
+                "weight_product": 0.0
+            },
+            {
+                "knight1": "Bedivere",
+                "knight2": "Lancelot",
+                "weight_product": 0.4779
+            },
+            {
+                "knight1": "Lancelot",
+                "knight2": "Lamorak",
+                "weight_product": 0.3458
+            },
+            {
+                "knight1": "Lamorak",
+                "knight2": "Gaheris",
+                "weight_product": 0.1056
+            },
+            {
+                "knight1": "Gaheris",
+                "knight2": "Tristan",
+                "weight_product": 0.08000000000000002
+            },
+            {
+                "knight1": "Tristan",
+                "knight2": "Kay Sir Gareth",
+                "weight_product": 0.102
+            }
+        ]
+    },
+    {
+        "genes": [
+            6,
+            11,
+            8,
+            4,
+            0,
+            3,
+            2,
+            1,
+            5,
+            9,
+            7,
+            10
+        ],
+        "fitness": 0.8754416666666667,
+        "weight_products": [
+            {
+                "knight1": "Lamorak",
+                "knight2": "Tristan",
+                "weight_product": 0.1368
+            },
+            {
+                "knight1": "Tristan",
+                "knight2": "Bedivere",
+                "weight_product": 0.1281
+            },
+            {
+                "knight1": "Bedivere",
+                "knight2": "Percival",
+                "weight_product": 0.2025
+            },
+            {
+                "knight1": "Percival",
+                "knight2": "Arthur",
+                "weight_product": 0.0858
+            },
+            {
+                "knight1": "Arthur",
+                "knight2": "Geraint",
+                "weight_product": 0.3402
+            },
+            {
+                "knight1": "Geraint",
+                "knight2": "Gawain",
+                "weight_product": 0.0047
+            },
+            {
+                "knight1": "Gawain",
+                "knight2": "Lancelot",
+                "weight_product": 0.19040000000000004
+            },
+            {
+                "knight1": "Lancelot",
+                "knight2": "Bors the Younger",
+                "weight_product": 0.0275
+            },
+            {
+                "knight1": "Bors the Younger",
+                "knight2": "Gaheris",
+                "weight_product": 0.072
+            },
+            {
+                "knight1": "Gaheris",
+                "knight2": "Kay Sir Gareth",
+                "weight_product": 0.22120000000000004
+            },
+            {
+                "knight1": "Kay Sir Gareth",
+                "knight2": "Galahad",
+                "weight_product": 0.024300000000000002
+            },
+            {
+                "knight1": "Galahad",
+                "knight2": "Lamorak",
+                "weight_product": 0.061200000000000004
+            }
+        ]
+    },
+    {
+        "genes": [
+            0,
+            4,
+            2,
+            1,
+            6,
+            10,
+            7,
+            5,
+            9,
+            11,
+            3,
+            8
+        ],
+        "fitness": 0.8791916666666666,
+        "weight_products": [
+            {
+                "knight1": "Arthur",
+                "knight2": "Percival",
+                "weight_product": 0.0858
+            },
+            {
+                "knight1": "Percival",
+                "knight2": "Gawain",
+                "weight_product": 0.019000000000000003
+            },
+            {
+                "knight1": "Gawain",
+                "knight2": "Lancelot",
+                "weight_product": 0.19040000000000004
+            },
+            {
+                "knight1": "Lancelot",
+                "knight2": "Lamorak",
+                "weight_product": 0.3458
+            },
+            {
+                "knight1": "Lamorak",
+                "knight2": "Galahad",
+                "weight_product": 0.061200000000000004
+            },
+            {
+                "knight1": "Galahad",
+                "knight2": "Kay Sir Gareth",
+                "weight_product": 0.024300000000000002
+            },
+            {
+                "knight1": "Kay Sir Gareth",
+                "knight2": "Bors the Younger",
+                "weight_product": 0.2916
+            },
+            {
+                "knight1": "Bors the Younger",
+                "knight2": "Gaheris",
+                "weight_product": 0.072
+            },
+            {
+                "knight1": "Gaheris",
+                "knight2": "Tristan",
+                "weight_product": 0.08000000000000002
+            },
+            {
+                "knight1": "Tristan",
+                "knight2": "Geraint",
+                "weight_product": 0.0096
+            },
+            {
+                "knight1": "Geraint",
+                "knight2": "Bedivere",
+                "weight_product": 0.0
+            },
+            {
+                "knight1": "Bedivere",
+                "knight2": "Arthur",
+                "weight_product": 0.27
+            }
+        ]
+    },
+    {
+        "genes": [
+            1,
+            5,
+            9,
+            6,
+            3,
+            8,
+            10,
+            7,
+            11,
+            0,
+            4,
+            2
+        ],
+        "fitness": 0.8941916666666667,
+        "weight_products": [
+            {
+                "knight1": "Lancelot",
+                "knight2": "Bors the Younger",
+                "weight_product": 0.0275
+            },
+            {
+                "knight1": "Bors the Younger",
+                "knight2": "Gaheris",
+                "weight_product": 0.072
+            },
+            {
+                "knight1": "Gaheris",
+                "knight2": "Lamorak",
+                "weight_product": 0.1056
+            },
+            {
+                "knight1": "Lamorak",
+                "knight2": "Geraint",
+                "weight_product": 0.23779999999999996
+            },
+            {
+                "knight1": "Geraint",
+                "knight2": "Bedivere",
+                "weight_product": 0.0
+            },
+            {
+                "knight1": "Bedivere",
+                "knight2": "Galahad",
+                "weight_product": 0.0504
+            },
+            {
+                "knight1": "Galahad",
+                "knight2": "Kay Sir Gareth",
+                "weight_product": 0.024300000000000002
+            },
+            {
+                "knight1": "Kay Sir Gareth",
+                "knight2": "Tristan",
+                "weight_product": 0.102
+            },
+            {
+                "knight1": "Tristan",
+                "knight2": "Arthur",
+                "weight_product": 0.35490000000000005
+            },
+            {
+                "knight1": "Arthur",
+                "knight2": "Percival",
+                "weight_product": 0.0858
+            },
+            {
+                "knight1": "Percival",
+                "knight2": "Gawain",
+                "weight_product": 0.019000000000000003
+            },
+            {
+                "knight1": "Gawain",
+                "knight2": "Lancelot",
+                "weight_product": 0.19040000000000004
+            }
+        ]
+    },
+    {
+        "genes": [
+            6,
+            4,
+            2,
+            1,
+            5,
+            9,
+            3,
+            8,
+            11,
+            7,
+            10,
+            0
+        ],
+        "fitness": 0.90065,
+        "weight_products": [
+            {
+                "knight1": "Lamorak",
+                "knight2": "Percival",
+                "weight_product": 0.1843
+            },
+            {
+                "knight1": "Percival",
+                "knight2": "Gawain",
+                "weight_product": 0.019000000000000003
+            },
+            {
+                "knight1": "Gawain",
+                "knight2": "Lancelot",
+                "weight_product": 0.19040000000000004
+            },
+            {
+                "knight1": "Lancelot",
+                "knight2": "Bors the Younger",
+                "weight_product": 0.0275
+            },
+            {
+                "knight1": "Bors the Younger",
+                "knight2": "Gaheris",
+                "weight_product": 0.072
+            },
+            {
+                "knight1": "Gaheris",
+                "knight2": "Geraint",
+                "weight_product": 0.1176
+            },
+            {
+                "knight1": "Geraint",
+                "knight2": "Bedivere",
+                "weight_product": 0.0
+            },
+            {
+                "knight1": "Bedivere",
+                "knight2": "Tristan",
+                "weight_product": 0.1281
+            },
+            {
+                "knight1": "Tristan",
+                "knight2": "Kay Sir Gareth",
+                "weight_product": 0.102
+            },
+            {
+                "knight1": "Kay Sir Gareth",
+                "knight2": "Galahad",
+                "weight_product": 0.024300000000000002
+            },
+            {
+                "knight1": "Galahad",
+                "knight2": "Arthur",
+                "weight_product": 0.087
+            },
+            {
+                "knight1": "Arthur",
+                "knight2": "Lamorak",
+                "weight_product": 0.24
+            }
+        ]
+    },
+    {
+        "genes": [
+            4,
+            0,
+            10,
+            8,
+            3,
+            2,
+            1,
+            5,
+            6,
+            9,
+            7,
+            11
+        ],
+        "fitness": 0.9134416666666667,
+        "weight_products": [
+            {
+                "knight1": "Percival",
+                "knight2": "Arthur",
+                "weight_product": 0.0858
+            },
+            {
+                "knight1": "Arthur",
+                "knight2": "Galahad",
+                "weight_product": 0.087
+            },
+            {
+                "knight1": "Galahad",
+                "knight2": "Bedivere",
+                "weight_product": 0.0504
+            },
+            {
+                "knight1": "Bedivere",
+                "knight2": "Geraint",
+                "weight_product": 0.0
+            },
+            {
+                "knight1": "Geraint",
+                "knight2": "Gawain",
+                "weight_product": 0.0047
+            },
+            {
+                "knight1": "Gawain",
+                "knight2": "Lancelot",
+                "weight_product": 0.19040000000000004
+            },
+            {
+                "knight1": "Lancelot",
+                "knight2": "Bors the Younger",
+                "weight_product": 0.0275
+            },
+            {
+                "knight1": "Bors the Younger",
+                "knight2": "Lamorak",
+                "weight_product": 0.1539
+            },
+            {
+                "knight1": "Lamorak",
+                "knight2": "Gaheris",
+                "weight_product": 0.1056
+            },
+            {
+                "knight1": "Gaheris",
+                "knight2": "Kay Sir Gareth",
+                "weight_product": 0.22120000000000004
+            },
+            {
+                "knight1": "Kay Sir Gareth",
+                "knight2": "Tristan",
+                "weight_product": 0.102
+            },
+            {
+                "knight1": "Tristan",
+                "knight2": "Percival",
+                "weight_product": 0.0102
+            }
+        ]
+    },
+    {
+        "genes": [
+            3,
+            8,
+            11,
+            4,
+            0,
+            10,
+            7,
+            6,
+            9,
+            5,
+            1,
+            2
+        ],
+        "fitness": 0.918875,
+        "weight_products": [
+            {
+                "knight1": "Geraint",
+                "knight2": "Bedivere",
+                "weight_product": 0.0
+            },
+            {
+                "knight1": "Bedivere",
+                "knight2": "Tristan",
+                "weight_product": 0.1281
+            },
+            {
+                "knight1": "Tristan",
+                "knight2": "Percival",
+                "weight_product": 0.0102
+            },
+            {
+                "knight1": "Percival",
+                "knight2": "Arthur",
+                "weight_product": 0.0858
+            },
+            {
+                "knight1": "Arthur",
+                "knight2": "Galahad",
+                "weight_product": 0.087
+            },
+            {
+                "knight1": "Galahad",
+                "knight2": "Kay Sir Gareth",
+                "weight_product": 0.024300000000000002
+            },
+            {
+                "knight1": "Kay Sir Gareth",
+                "knight2": "Lamorak",
+                "weight_product": 0.2379
+            },
+            {
+                "knight1": "Lamorak",
+                "knight2": "Gaheris",
+                "weight_product": 0.1056
+            },
+            {
+                "knight1": "Gaheris",
+                "knight2": "Bors the Younger",
+                "weight_product": 0.072
+            },
+            {
+                "knight1": "Bors the Younger",
+                "knight2": "Lancelot",
+                "weight_product": 0.0275
+            },
+            {
+                "knight1": "Lancelot",
+                "knight2": "Gawain",
+                "weight_product": 0.19040000000000004
+            },
+            {
+                "knight1": "Gawain",
+                "knight2": "Geraint",
+                "weight_product": 0.0047
+            }
+        ]
+    }
+]

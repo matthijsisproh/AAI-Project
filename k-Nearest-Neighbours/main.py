@@ -1,6 +1,6 @@
 import numpy as np
 
-from data import Data, data_min_max
+from data_knn import Data, data_min_max
 from analyse import analyse
 from knn import k_nearest_neighbours
 
